@@ -14,9 +14,9 @@
 
 int main(void)
 {
-	my_lcd_init(4);			// Initialise LCD, argument: 8 for 8 bit mode, 4 for 4 bit mode.
+	my_lcd_init(4, 0);			// Initialise LCD, argument: 8 for 8 bit mode, 4 for 4 bit mode.
 
-	char con[32];
+	char con[33];
 
 	while (1)
     {
@@ -24,7 +24,7 @@ int main(void)
 		// Demonstrate concatenation of character string with number:
 		for(int num=0; num <=3 ; num++)
 		{
-			sprintf(con, "%s%c%i", "COUNT:", '\n', num);		// Create a concatenated string with text string and number.
+			snprintf(con, 33, "%s%c%i", "COUNT:", '\n', num);		// Create a concatenated string with text string and number.
 			my_lcd_display(con);								// Display concatenated string on LCD.
 			_delay_ms(500);										// wait for 0.1 seconds to display the number.
 		}
