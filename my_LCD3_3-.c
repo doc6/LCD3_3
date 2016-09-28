@@ -1,20 +1,23 @@
 /*
- * Program: my_LCD3_3.c
+ * Program: my_LCD3_3_TEST.c
  * Author:  D. O. Corlett
  *
- * Initialises, and displays text
- * for dot matrix LCD with 4 and 8
- * bit interface and text wrapping.
- * Displays example strings
+ * This program is used to test an LCD.
+ * It displays various text strings to
+ * the LCD to test the my_lcd library.
+ *
  */
 
 
 #include <util/delay.h>
 #include "my_lcd.h"
+#include <stdio.h>
 
 int main(void)
 {
-	my_lcd_init(4, 0);			// Initialise LCD, argument: 8 for 8 bit mode, 4 for 4 bit mode.
+	my_lcd_process_delayTime(50, 2000); 		// Sets delay times for LCD to process instructions.
+	my_lcd_init(4, 0);							// Initialise LCD, argument: 8 for 8 bit mode, 4 for 4 bit mode.
+
 
 	char con[33];
 

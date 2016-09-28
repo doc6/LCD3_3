@@ -49,7 +49,7 @@ all: LCD3_3.elf secondary-outputs
 LCD3_3.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C Linker'
-	avr-gcc -Wl,-Map,LCD3_3.map -mmcu=atmega328p -o "LCD3_3.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	avr-gcc -Wl,-Map,LCD3_3.map -L"H:\ENEL317-16B\Git_Repository\libs" -mmcu=atmega328p -o "LCD3_3.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

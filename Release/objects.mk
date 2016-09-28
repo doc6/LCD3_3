@@ -4,5 +4,5 @@
 
 USER_OBJS := ../libmy_lcd.a
 
-LIBS :=
+LIBS := -lmy_lcd
 
